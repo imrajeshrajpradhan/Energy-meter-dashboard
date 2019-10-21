@@ -1,0 +1,8 @@
+var b64string ='CgAAAAAAAAAAAAAAAAAAAA==' ;
+var buf = Buffer.from(b64string, 'base64');
+var str=Buffer.from(buf).toString('hex');
+var sub=str.substring(0, 2);
+var converter = require('hex2dec');
+ 
+var dec = converter.hexToDec(sub);
+console.log(dec)
